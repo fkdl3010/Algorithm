@@ -11,7 +11,6 @@ public class MyAnswer {
 		
 		ArrayList<String> list = new ArrayList<String>();
 		int n = sc.nextInt();
-		int[] answer = new int[n];
 		
 		for (int i = 0; i < n; i++) {
 			
@@ -24,13 +23,13 @@ public class MyAnswer {
 			for (int i = 0; i < temp.length(); i++) {
 				if(temp.charAt(i) == 'O') {
 					house++;
-					
+					m += house;
 				}else {
 					house = 0;
 				}
-				m += house;
-
 			}
+			
+			System.out.println(m);
 		}
 		
 	}
