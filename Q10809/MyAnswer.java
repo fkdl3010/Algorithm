@@ -14,15 +14,19 @@ public class MyAnswer {
 		String target = sc.next();
 		String answer = "";
 		for(int i = 0; i < alpa.length; i++) {
+			boolean check = false;
 			for (int j = 0; j < target.length(); j++) {
-				if(target.charAt(j) + "" == alpa[i]) {
+				if((target.charAt(j) + "").equals(alpa[i]) ) {
 					answer += " " + target.indexOf(alpa[i]);
-					System.out.println(target.indexOf(alpa[i]));
-				}else {
-					answer += "-1";
+					check = true;
+					break;
 				}
 			}
+			if(!check) {
+				answer += " -1";
+			}
 		}
+		System.out.println(answer);
 		sc.close();
 	}
 
