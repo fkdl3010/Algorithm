@@ -1,8 +1,6 @@
 package Q2675;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.Scanner;
 
 public class MyAnswer {
@@ -11,29 +9,24 @@ public class MyAnswer {
 		// https://www.acmicpc.net/problem/2675
 		// 2021-03-25
 		
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		StringBuffer sb = null;
-		int totalRoop = br.read() - '0';
+		Scanner sc = new Scanner(System.in);
+		StringBuffer sb = new StringBuffer();
+		int totalRoop = sc.nextInt();
 		
 		for (int i = 0; i < totalRoop; i++) {
-			int innerRoop = br.read() - '0';
-			String txt = br.readLine();
-			sb = new StringBuffer();
-			for (int j = 0; j < innerRoop; j++) {
-				
-				for (int j2 = 0; j2 < txt.length(); j2++) {
-					
-					for (int k = 0; k < innerRoop; k++) {
-						
-						sb.append(txt.charAt(j2));
-						
-					}
-					
+			int sRoop = sc.nextInt();
+			String txt = sc.next();
+			for (int j = 0; j < txt.length(); j++) {
+				for (int j2 = 0; j2 < sRoop; j2++) {
+					sb.append(txt.charAt(j));
 				}
+				
+				
 			}
-			System.out.println(sb);
+			sb.append("\n");
 		}
-
+		System.out.println(sb.toString());
+		sc.close();
 	}
 
 }
