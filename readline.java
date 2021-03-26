@@ -18,12 +18,18 @@ public class readline {
 //		System.out.println("buffer: " + buffer);
 //		sc.close();
 		
-		Scanner s = new Scanner("\n\n\n가나다\n\n라\n\n");
+		Scanner s = new Scanner("우리나라\n대한민국\n");
 		String str = null;
-		while(s.hasNext()){
-			str = s.next();
-			System.out.println("출력:"+str);
-			}
+
+
+		str = s.next();
+		System.out.println("출력:"+str); 
+		str = s.nextLine();
+		System.out.println("출력:"+str);
+
+
+		str = s.nextLine();
+		System.out.println("출력:"+str);
 	}
 
 }
