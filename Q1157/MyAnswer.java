@@ -12,8 +12,7 @@ public class MyAnswer {
 	public static void main(String[] args) throws IOException{
 		// https://www.acmicpc.net/problem/1157
 		// 2021-03-26
-		long before = Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
-
+		
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
 		String target = br.readLine().toLowerCase();
@@ -72,15 +71,7 @@ public class MyAnswer {
 		}
 		br.close();
 		System.out.println(answer == "" ? tempString[max].toUpperCase() : answer);
-		System.gc();
-
-		// 실행 후 메모리 사용량 조회
-				long after  = Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
-				
-				// 메모리 사용량 측정
-				long usedMemory = (before - after)/1024/1024;
-
-				System.out.println("Used Memory : " + usedMemory);
+	
 	}
 
 }
