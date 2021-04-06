@@ -29,7 +29,7 @@ public class MyAnswer {
 					}
 					
 				}
-				
+				 
 				if(ch == 'd') {
 					if(i < target.length() - 1) {
 						
