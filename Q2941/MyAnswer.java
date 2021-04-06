@@ -23,7 +23,7 @@ public class MyAnswer {
 						if(target.charAt(i + 1) == '=') {
 							i++;
 						}
-						else if(ch == '-') {
+						else if(target.charAt(i + 1) == '-') {
 							i++;
 						}
 					}
@@ -37,7 +37,7 @@ public class MyAnswer {
 							
 							if(i < target.length() - 2) {
 								
-								if(target.charAt(i + 1) == '=') {
+								if(target.charAt(i + 2) == '=') {
 									
 									i += 2;
 								} 
