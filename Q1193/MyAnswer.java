@@ -11,7 +11,6 @@ public class MyAnswer {
 		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();
 		if(n == 1) {
-			System.out.println("1/1");
 			sc.close();
 			return;
 		}
@@ -20,7 +19,6 @@ public class MyAnswer {
 		while(n > i ) {
 			
 			n -= i;
-			
 			i++;
 			count++;
 		}
@@ -29,7 +27,7 @@ public class MyAnswer {
 			i--;
 			z++;
 		}
-		
+		// 짝수 홀수가 방향이 다름
 		if(count % 2 == 1) {
 			System.out.println(z + "/" + i);
 		}else {
